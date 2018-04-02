@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j6N-Ju-yKs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6bs-g2-9CU">
+            <objects>
+                <navigationController id="j6N-Ju-yKs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="notifications icon" selectedImage="notifications icon" id="L43-bf-I8c"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="76X-B6-DLa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="i5g-Yy-g6q" kind="relationship" relationship="rootViewController" id="VmS-Wr-dae"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYI-JJ-02R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775" y="26"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="PLt-64-SQI">
+            <objects>
+                <viewController id="i5g-Yy-g6q" customClass="NotificationsViewController" customModule="Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zIO-1r-PK9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uko-Mw-vRY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="i5g-Yy-g6q" id="fnZ-2k-asZ"/>
+                                    <outlet property="delegate" destination="i5g-Yy-g6q" id="Xaz-PX-mIz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mqL-KT-4u5" firstAttribute="bottom" secondItem="uko-Mw-vRY" secondAttribute="bottom" id="4mg-0O-kGB"/>
+                            <constraint firstItem="uko-Mw-vRY" firstAttribute="top" secondItem="mqL-KT-4u5" secondAttribute="top" id="b5Z-JD-tuw"/>
+                            <constraint firstItem="uko-Mw-vRY" firstAttribute="leading" secondItem="mqL-KT-4u5" secondAttribute="leading" id="g1d-p3-Sob"/>
+                            <constraint firstItem="mqL-KT-4u5" firstAttribute="trailing" secondItem="uko-Mw-vRY" secondAttribute="trailing" id="qAa-oM-mJX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mqL-KT-4u5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notifications" id="LRb-TR-6FT"/>
+                    <connections>
+                        <outlet property="tableView" destination="uko-Mw-vRY" id="9fe-gV-6BI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWH-Lr-yJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="26"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="notifications icon" width="20" height="24"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

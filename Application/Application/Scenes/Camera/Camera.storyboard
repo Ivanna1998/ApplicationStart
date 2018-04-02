@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Cg-1d-rZR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="XYW-q7-29d">
+            <objects>
+                <navigationController id="4Cg-1d-rZR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="take shot icon" selectedImage="take shot icon" id="HV3-ej-NDf">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="hq3-VM-FPN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="V30-or-Ofa" kind="relationship" relationship="rootViewController" id="pQe-ou-buL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyq-Zn-FhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1031" y="103"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="Ue1-mH-d2Y">
+            <objects>
+                <viewController id="V30-or-Ofa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rKh-Vi-Iba">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mPt-yk-kff"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera" id="Y8J-uG-4gp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0q-Mi-hXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="take shot icon" width="42" height="42"/>
+    </resources>
+</document>

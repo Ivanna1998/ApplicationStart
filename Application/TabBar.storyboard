@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iD4-vc-al1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="S6h-9k-Ude">
+            <objects>
+                <tabBarController id="iD4-vc-al1" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hIB-Hi-CFu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qWK-RJ-G5V" kind="relationship" relationship="viewControllers" id="aql-Vz-OHP"/>
+                        <segue destination="Cwt-Ji-8da" kind="relationship" relationship="viewControllers" id="htP-Kj-Stl"/>
+                        <segue destination="OHc-yp-qmx" kind="relationship" relationship="viewControllers" id="PyI-oy-L0y"/>
+                        <segue destination="pBP-vV-FpQ" kind="relationship" relationship="viewControllers" id="RoE-48-v5y"/>
+                        <segue destination="6q8-g8-gdD" kind="relationship" relationship="viewControllers" id="h4p-wK-LRj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3R-Ep-maY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-716" y="-393"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="FuD-dF-SbM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Camera" id="OHc-yp-qmx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="take shot icon" id="lGx-BL-tTG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTT-Ag-RXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79" y="-669"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="a6I-0c-7L7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="qWK-RJ-G5V" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="popular" id="MMs-ku-6iP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFB-7R-xdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="-566"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="N8j-bS-b5I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Feed" id="Cwt-Ji-8da" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="feed" id="LBS-5c-T6t"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MTH-IY-CAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="-438"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="mMx-Hg-VY0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notifications" id="6q8-g8-gdD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="notifications icon" id="ksy-qV-wK7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzv-SO-1mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="-316"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="i93-c0-JNg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="pBP-vV-FpQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profile" id="tfA-1g-NKD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FaG-bh-FxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="-181"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="feed" width="25" height="24"/>
+        <image name="notifications icon" width="20" height="24"/>
+        <image name="popular" width="20" height="27"/>
+        <image name="profile" width="25" height="26"/>
+        <image name="take shot icon" width="42" height="42"/>
+    </resources>
+</document>
