@@ -55,6 +55,9 @@
                                 <state key="normal" title="Forgot your password?">
                                     <color key="titleColor" red="0.29652960039380571" green="0.85531968480173448" blue="0.87848984771573602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="secondPassword:" destination="E6I-Fs-xcW" eventType="touchUpInside" id="PNr-PO-F6g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYd-Z9-Kva">
                                 <rect key="frame" x="140" y="601" width="95" height="30"/>
@@ -63,6 +66,9 @@
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="0.29715218069171762" green="0.71964871614379311" blue="0.87848984770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUp:" destination="E6I-Fs-xcW" eventType="touchUpInside" id="JDa-uy-OHY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>

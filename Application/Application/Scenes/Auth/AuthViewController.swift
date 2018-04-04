@@ -15,6 +15,14 @@ final class AuthViewController: UIViewController {
   
     @IBOutlet weak var password: UITextField!
     
+    @IBAction func signUp(_ sender: UIButton) {
+        self.newSwitchMain()
+    }
+    
+    @IBAction func secondPassword(_ sender: UIButton) {
+        self.oldSwitchMain()
+        
+    }
     
     @IBAction func login(_ sender: UIButton) {
         guard let usernameText = username.text,
@@ -32,10 +40,27 @@ final class AuthViewController: UIViewController {
                             self?.switchMain()
         }
     }
+    
     private func switchMain() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         guard let main = UIStoryboard(name: "TabBar", bundle: Bundle.main).instantiateInitialViewController()
+            else { return }
+        appDelegate.window?.rootViewController = main
+    }
+    
+    private func newSwitchMain() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        guard let main = UIStoryboard(name: "NewAuth", bundle: Bundle.main).instantiateInitialViewController()
+            else { return }
+        appDelegate.window?.rootViewController = main
+    }
+
+    private func oldSwitchMain() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        guard let main = UIStoryboard(name: "OldAuth", bundle:     Bundle.main).instantiateInitialViewController()
             else { return }
         appDelegate.window?.rootViewController = main
     }
