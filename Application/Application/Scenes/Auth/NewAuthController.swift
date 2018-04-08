@@ -13,7 +13,7 @@ final class NewAuthViewController: UIViewController {
     
     @IBOutlet weak var email: UITextField!
     
-    @IBOutlet weak var phonePassword: UITextField!
+    @IBOutlet weak var phone_password: UITextField!
     
     @IBAction func complete(_ sender: UIButton) {
     }

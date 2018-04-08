@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13771"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="PgR-Sf-DeB" kind="relationship" relationship="rootViewController" id="4Vb-L8-9st"/>
+                        <segue destination="0ru-8P-lPH" kind="relationship" relationship="rootViewController" id="VIQ-hv-cD1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eP5-Ka-KAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,6 +88,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TsW-rS-eaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124" y="100.29985007496252"/>
+        </scene>
+        <!--Conversations View Controller-->
+        <scene sceneID="Xid-CD-gHL">
+            <objects>
+                <viewController storyboardIdentifier="ConversationsViewController" id="0ru-8P-lPH" customClass="ConversationsViewController" customModule="Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eba-Di-65w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T53-td-HqF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qr0-xs-rtE">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0ru-8P-lPH" id="Y8j-09-ffN"/>
+                                    <outlet property="delegate" destination="0ru-8P-lPH" id="8Y6-sc-jTX"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T53-td-HqF" firstAttribute="top" secondItem="hj1-1R-oMP" secondAttribute="top" id="3wc-GX-YxH"/>
+                            <constraint firstItem="hj1-1R-oMP" firstAttribute="trailing" secondItem="T53-td-HqF" secondAttribute="trailing" id="FtV-DH-DjC"/>
+                            <constraint firstItem="hj1-1R-oMP" firstAttribute="bottom" secondItem="T53-td-HqF" secondAttribute="bottom" id="XZ1-kz-9B8"/>
+                            <constraint firstItem="T53-td-HqF" firstAttribute="leading" secondItem="hj1-1R-oMP" secondAttribute="leading" id="rQj-7Y-mII"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hj1-1R-oMP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YLH-xv-Dmu"/>
+                    <connections>
+                        <outlet property="collectionView" destination="T53-td-HqF" id="mK5-lu-eRX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rgb-yI-dKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="105"/>
         </scene>
     </scenes>
     <resources>

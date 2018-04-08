@@ -27,12 +27,15 @@
 		846BD4B920417C4F00873861 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BD4B820417C4F00873861 /* NotificationsViewController.swift */; };
 		846BD4BC20417F9000873861 /* NatificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BD4BB20417F9000873861 /* NatificationsTableViewCell.swift */; };
 		8475385FA8814165C9E1B5B1 /* Pods_ApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFB32895A850F54A19450F8 /* Pods_ApplicationUITests.framework */; };
-		848406102073F3C200B988C2 /* NewAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8484060F2073F3C200B988C2 /* NewAuth.storyboard */; };
-		848406122073F3ED00B988C2 /* NewAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848406112073F3ED00B988C2 /* NewAuthController.swift */; };
 		848406142074019C00B988C2 /* OldAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848406132074019C00B988C2 /* OldAuth.storyboard */; };
 		84840616207401B000B988C2 /* OldAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84840615207401B000B988C2 /* OldAuthViewController.swift */; };
 		849FC51D2053C9EA006065F7 /* NatificationsTableNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849FC51C2053C9EA006065F7 /* NatificationsTableNewCell.xib */; };
 		849FC51F2053E4EE006065F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849FC51E2053E4EE006065F7 /* GoogleService-Info.plist */; };
+		84CD0BD72077A23A00F57C3C /* FirstAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD0BD62077A23A00F57C3C /* FirstAuth.storyboard */; };
+		84CD0BD92077A24C00F57C3C /* FirstAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD0BD82077A24C00F57C3C /* FirstAuthViewController.swift */; };
+		84D067A12074AEBC00E3ED8C /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D067A02074AEBC00E3ED8C /* ConversationsViewController.swift */; };
+		84D067A42074B14900E3ED8C /* ConversationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D067A32074B14900E3ED8C /* ConversationCell.xib */; };
+		84D067A62074B16100E3ED8C /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D067A52074B16100E3ED8C /* ConversationCell.swift */; };
 		CBE71BE59232B43016404897 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E63BC00CAF648A930AF430 /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,12 +87,15 @@
 		846BD4B62041768600873861 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		846BD4B820417C4F00873861 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		846BD4BB20417F9000873861 /* NatificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatificationsTableViewCell.swift; sourceTree = "<group>"; };
-		8484060F2073F3C200B988C2 /* NewAuth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAuth.storyboard; sourceTree = "<group>"; };
-		848406112073F3ED00B988C2 /* NewAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAuthController.swift; sourceTree = "<group>"; };
 		848406132074019C00B988C2 /* OldAuth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OldAuth.storyboard; sourceTree = "<group>"; };
 		84840615207401B000B988C2 /* OldAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldAuthViewController.swift; sourceTree = "<group>"; };
 		849FC51C2053C9EA006065F7 /* NatificationsTableNewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NatificationsTableNewCell.xib; sourceTree = "<group>"; };
 		849FC51E2053E4EE006065F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84CD0BD62077A23A00F57C3C /* FirstAuth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstAuth.storyboard; sourceTree = "<group>"; };
+		84CD0BD82077A24C00F57C3C /* FirstAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAuthViewController.swift; sourceTree = "<group>"; };
+		84D067A02074AEBC00E3ED8C /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		84D067A32074B14900E3ED8C /* ConversationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationCell.xib; sourceTree = "<group>"; };
+		84D067A52074B16100E3ED8C /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		956571D345C1DB9DCE99B009 /* Pods-ApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApplicationTests/Pods-ApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7CD18B8787EF1C04BDC9C65 /* Pods-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Application/Pods-Application.debug.xcconfig"; sourceTree = "<group>"; };
 		F4406AE2332C70ED4900D2CE /* Pods-Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.release.xcconfig"; path = "Pods/Target Support Files/Pods-Application/Pods-Application.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,8 +157,8 @@
 			children = (
 				844436AD206F6ECB00343EA4 /* Auth.storyboard */,
 				844436AF206F6F1800343EA4 /* AuthViewController.swift */,
-				8484060F2073F3C200B988C2 /* NewAuth.storyboard */,
-				848406112073F3ED00B988C2 /* NewAuthController.swift */,
+				84CD0BD62077A23A00F57C3C /* FirstAuth.storyboard */,
+				84CD0BD82077A24C00F57C3C /* FirstAuthViewController.swift */,
 				848406132074019C00B988C2 /* OldAuth.storyboard */,
 				84840615207401B000B988C2 /* OldAuthViewController.swift */,
 			);
@@ -255,6 +261,7 @@
 		846BD4AB2041762700873861 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				84D0679F2074AE9300E3ED8C /* Conversations */,
 				846BD4B22041766E00873861 /* Chat.storyboard */,
 				844436B1206F83AE00343EA4 /* ChatViewControlller.swift */,
 			);
@@ -286,6 +293,24 @@
 				849FC51C2053C9EA006065F7 /* NatificationsTableNewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		84D0679F2074AE9300E3ED8C /* Conversations */ = {
+			isa = PBXGroup;
+			children = (
+				84D067A22074B12600E3ED8C /* Cells */,
+				84D067A02074AEBC00E3ED8C /* ConversationsViewController.swift */,
+			);
+			path = Conversations;
+			sourceTree = "<group>";
+		};
+		84D067A22074B12600E3ED8C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84D067A32074B14900E3ED8C /* ConversationCell.xib */,
+				84D067A52074B16100E3ED8C /* ConversationCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,7 +430,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				846BD4B32041766E00873861 /* Chat.storyboard in Resources */,
-				848406102073F3C200B988C2 /* NewAuth.storyboard in Resources */,
 				846BD4B52041767800873861 /* Camera.storyboard in Resources */,
 				846BD4B72041768600873861 /* Feed.storyboard in Resources */,
 				846BD4A52041729A00873861 /* TabBar.storyboard in Resources */,
@@ -413,6 +437,8 @@
 				848406142074019C00B988C2 /* OldAuth.storyboard in Resources */,
 				844436AE206F6ECB00343EA4 /* Auth.storyboard in Resources */,
 				846BD4AF2041765300873861 /* Profile.storyboard in Resources */,
+				84D067A42074B14900E3ED8C /* ConversationCell.xib in Resources */,
+				84CD0BD72077A23A00F57C3C /* FirstAuth.storyboard in Resources */,
 				846BD4B12041766400873861 /* Notifications.storyboard in Resources */,
 				846BD47E2041720D00873861 /* Assets.xcassets in Resources */,
 				849FC51F2053E4EE006065F7 /* GoogleService-Info.plist in Resources */,
@@ -600,11 +626,13 @@
 			files = (
 				846BD4BC20417F9000873861 /* NatificationsTableViewCell.swift in Sources */,
 				846BD4B920417C4F00873861 /* NotificationsViewController.swift in Sources */,
-				848406122073F3ED00B988C2 /* NewAuthController.swift in Sources */,
 				844436B0206F6F1800343EA4 /* AuthViewController.swift in Sources */,
+				84D067A62074B16100E3ED8C /* ConversationCell.swift in Sources */,
 				846BD4792041720D00873861 /* ViewController.swift in Sources */,
 				846BD4772041720D00873861 /* AppDelegate.swift in Sources */,
+				84D067A12074AEBC00E3ED8C /* ConversationsViewController.swift in Sources */,
 				844436B2206F83AE00343EA4 /* ChatViewControlller.swift in Sources */,
+				84CD0BD92077A24C00F57C3C /* FirstAuthViewController.swift in Sources */,
 				84840616207401B000B988C2 /* OldAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
