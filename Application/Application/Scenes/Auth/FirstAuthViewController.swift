@@ -21,6 +21,10 @@ final class FirstAuthViewController: UIViewController {
             passwordText.count >= 6
             else { return }
         
+        if emailText.isEmpty || passwordText.isEmpty {
+            displayAlert(userMessage: "The field is empty.")
+        }
+        
         Auth.auth().createUserAndRetrieveData(withEmail: emailText, password: passwordText) { [weak self] (user, error) in
                             if let error = error {
                                 debugPrint(error.localizedDescription)
@@ -28,6 +32,13 @@ final class FirstAuthViewController: UIViewController {
                             }
                             self?.switchMain()
         }
+    }
+    
+    func displayAlert(userMessage: String) {
+        var myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(ok)
+        self.present(myAlert, animated: true, completion: nil)
     }
     
     // Button to return to the home page

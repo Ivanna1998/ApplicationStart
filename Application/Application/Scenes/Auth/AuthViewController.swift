@@ -26,10 +26,15 @@ final class AuthViewController: UIViewController {
     
     // LOGIN IN
     @IBAction func login(_ sender: UIButton) {
+        
         guard let usernameText = username.text,
             let passwordText = password.text,
             passwordText.count >= 6
             else { return }
+        
+        if usernameText.isEmpty || passwordText.isEmpty {
+            displayAlert(userMessage: "The field is empty.")
+        }
         
         Auth.auth().signIn(withEmail: usernameText,
                            password: passwordText) { [weak self] (user, error) in
@@ -43,6 +48,12 @@ final class AuthViewController: UIViewController {
         }
     }
     
+    func displayAlert(userMessage: String) {
+        var myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(ok)
+        self.present(myAlert, animated: true, completion: nil)
+    }
     
     private func switchMain() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
