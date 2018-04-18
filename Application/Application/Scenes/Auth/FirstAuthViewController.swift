@@ -27,8 +27,9 @@ final class FirstAuthViewController: UIViewController {
         
         Auth.auth().createUserAndRetrieveData(withEmail: emailText, password: passwordText) { [weak self] (user, error) in
                             if let error = error {
+                                //debugPrint(error.localizedDescription)
+                                self?.displayAlert(userMessage: "Error")
                                 debugPrint(error.localizedDescription)
-                                return
                             }
                             self?.switchMain()
         }
