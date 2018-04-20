@@ -31,9 +31,10 @@ final class OldAuthViewController: UIViewController {
         
         else {
             activityIndicator.startAnimating()
-    
             Auth.auth().sendPasswordReset(withEmail: emailText) { (error) in
                 if let error = error {
+                    self.displayAlert(userMessage: (error.localizedDescription))
+                    self.activityIndicator.stopAnimating()
                     debugPrint(error.localizedDescription)
                     return
                 }

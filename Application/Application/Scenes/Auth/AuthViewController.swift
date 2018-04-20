@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 
 final class AuthViewController: UIViewController {
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -26,24 +27,28 @@ final class AuthViewController: UIViewController {
     
     // LOGIN IN
     @IBAction func login(_ sender: UIButton) {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.white
+        view.addSubview(activityIndicator)
         
         guard let usernameText = username.text,
             let passwordText = password.text,
             passwordText.count >= 6
             else { return }
         
-        if usernameText.isEmpty || passwordText.isEmpty {
-            displayAlert(userMessage: "The field is empty.")
-        }
+        activityIndicator.startAnimating()
         
         Auth.auth().signIn(withEmail: usernameText,
                            password: passwordText) { [weak self] (user, error) in
                             if let error = error {
                                 //debugPrint("//////////////////////////////")
                                 debugPrint(error.localizedDescription)
+                                self?.displayAlert(userMessage: (error.localizedDescription))
+                                self?.activityIndicator.stopAnimating()
                                 return
                             }
-                            //debugPrint(user)
+                            self?.activityIndicator.stopAnimating()
                             self?.switchMain()
         }
     }

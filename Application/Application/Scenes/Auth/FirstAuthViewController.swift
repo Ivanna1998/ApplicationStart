@@ -11,26 +11,41 @@ import FirebaseAuth
 
 final class FirstAuthViewController: UIViewController {
     
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
     // Button to confirm registration and log in to TabBar
     @IBAction func complete(_ sender: UIButton) {
+        
         guard let emailText = email.text,
             let passwordText = password.text,
             passwordText.count >= 6
             else { return }
         
-        if emailText.isEmpty || passwordText.isEmpty {
-            displayAlert(userMessage: "The field is empty.")
-        }
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.white
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        
+        //if emailText.isEmpty || passwordText.isEmpty {
+        //    displayAlert(userMessage: "The field is empty.")
+        //    activityIndicator.stopAnimating()
+        //}
+        
+        //else {
+        //activityIndicator.startAnimating()
         
         Auth.auth().createUserAndRetrieveData(withEmail: emailText, password: passwordText) { [weak self] (user, error) in
                             if let error = error {
-                                //debugPrint(error.localizedDescription)
-                                self?.displayAlert(userMessage: "Error")
+                                self?.displayAlert(userMessage: (error.localizedDescription))
+                                self?.activityIndicator.stopAnimating()
                                 debugPrint(error.localizedDescription)
+                                return
                             }
+                            self?.activityIndicator.stopAnimating()
                             self?.switchMain()
         }
     }
