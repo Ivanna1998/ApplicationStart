@@ -30,14 +30,6 @@ final class FirstAuthViewController: UIViewController {
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
         
-        //if emailText.isEmpty || passwordText.isEmpty {
-        //    displayAlert(userMessage: "The field is empty.")
-        //    activityIndicator.stopAnimating()
-        //}
-        
-        //else {
-        //activityIndicator.startAnimating()
-        
         Auth.auth().createUserAndRetrieveData(withEmail: emailText, password: passwordText) { [weak self] (user, error) in
                             if let error = error {
                                 self?.displayAlert(userMessage: (error.localizedDescription))
@@ -59,21 +51,13 @@ final class FirstAuthViewController: UIViewController {
     
     // Button to return to the home page
     @IBAction func back(_ sender: UIButton) {
-        self.back_switchMain()
+        navigationController?.popViewController(animated: true)
     }
     
     private func switchMain() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         guard let main = UIStoryboard(name: "TabBar", bundle: Bundle.main).instantiateInitialViewController()
-            else { return }
-        appDelegate.window?.rootViewController = main
-    }
-    
-    private func back_switchMain() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
-        guard let main = UIStoryboard(name: "Auth", bundle: Bundle.main).instantiateInitialViewController()
             else { return }
         appDelegate.window?.rootViewController = main
     }

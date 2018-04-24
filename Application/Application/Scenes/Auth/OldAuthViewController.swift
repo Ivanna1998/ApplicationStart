@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 
 final class OldAuthViewController: UIViewController {
+    var emailText: String?
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
@@ -52,15 +53,12 @@ final class OldAuthViewController: UIViewController {
     
     // Button to return to the home page
     @IBAction func back(_ sender: UIButton) {
-        self.switchMain()
+        navigationController?.popViewController(animated: true)
     }
     
-    private func switchMain() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        guard let main = UIStoryboard(name: "Auth", bundle: Bundle.main).instantiateInitialViewController()
-            else { return }
-        appDelegate.window?.rootViewController = main
+        email.text = emailText
     }
-    
 }

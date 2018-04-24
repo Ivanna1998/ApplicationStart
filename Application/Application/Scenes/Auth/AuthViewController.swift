@@ -17,12 +17,19 @@ final class AuthViewController: UIViewController {
     
     // Button for registration (Sign up)
     @IBAction func signUp(_ sender: UIButton) {
-        self.newSwitchMain()
+        performSegue(withIdentifier: "showSignUp", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSignUp" {
+            let viewController = segue.destination as? FirstAuthViewController
+            viewController?.email.text = username.text
+        }
     }
     
     // Button for sending new code (Forgot your password?)
     @IBAction func secondPassword(_ sender: UIButton) {
-        self.oldSwitchMain()
+        
     }
     
     // LOGIN IN
@@ -53,6 +60,7 @@ final class AuthViewController: UIViewController {
         }
     }
     
+    
     func displayAlert(userMessage: String) {
         var myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
         let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
@@ -68,20 +76,20 @@ final class AuthViewController: UIViewController {
         appDelegate.window?.rootViewController = main
     }
     
-    private func newSwitchMain() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
-        guard let main = UIStoryboard(name: "FirstAuth", bundle: Bundle.main).instantiateInitialViewController()
-            else { return }
-        appDelegate.window?.rootViewController = main
-    }
+//    private func newSwitchMain() {
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+//
+//        guard let main = UIStoryboard(name: "FirstAuth", bundle: Bundle.main).instantiateInitialViewController()
+//            else { return }
+//        appDelegate.window?.rootViewController = main
+//    }
 
-    private func oldSwitchMain() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
-        guard let main = UIStoryboard(name: "OldAuth", bundle:     Bundle.main).instantiateInitialViewController()
-            else { return }
-        appDelegate.window?.rootViewController = main
-    }
+//    private func oldSwitchMain() {
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+//        
+//        guard let main = UIStoryboard(name: "OldAuth", bundle: Bundle.main).instantiateInitialViewController()
+//            else { return }
+//        appDelegate.window?.rootViewController = main
+//    }
     
 }
