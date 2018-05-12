@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 
 final class OldAuthViewController: UIViewController {
+    
     var emailText: String?
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
@@ -58,7 +59,6 @@ final class OldAuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         email.text = emailText
     }
 }

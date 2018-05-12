@@ -17,22 +17,21 @@ final class AuthViewController: UIViewController {
     
     // Button for registration (Sign up)
     @IBAction func signUp(_ sender: UIButton) {
-        performSegue(withIdentifier: "showSignUp", sender: sender)
+        //performSegue(withIdentifier: "showSignUp", sender: sender)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSignUp" {
             let viewController = segue.destination as? FirstAuthViewController
-            viewController?.email.text = username.text
+            viewController?.emailText = username.text
+            let passwordViewController = segue.destination as? OldAuthViewController
+            passwordViewController?.emailText = username.text
         }
     }
     
-    // Button for sending new code (Forgot your password?)
     @IBAction func secondPassword(_ sender: UIButton) {
-        
     }
     
-    // LOGIN IN
     @IBAction func login(_ sender: UIButton) {
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
@@ -75,21 +74,4 @@ final class AuthViewController: UIViewController {
             else { return }
         appDelegate.window?.rootViewController = main
     }
-    
-//    private func newSwitchMain() {
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-//
-//        guard let main = UIStoryboard(name: "FirstAuth", bundle: Bundle.main).instantiateInitialViewController()
-//            else { return }
-//        appDelegate.window?.rootViewController = main
-//    }
-
-//    private func oldSwitchMain() {
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-//        
-//        guard let main = UIStoryboard(name: "OldAuth", bundle: Bundle.main).instantiateInitialViewController()
-//            else { return }
-//        appDelegate.window?.rootViewController = main
-//    }
-    
 }

@@ -32,7 +32,7 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationsTableNewCell", for: indexPath) as? NotificationsTableViewCell else { fatalError() }
         cell.name.text = "John Doe"
         cell.subName.text = "Sent notifications.Sent notifications.Sent notifications.Sent notifications.Sent notifications.Sent notifications.Sent notifications."
-        cell.avatar.image = UIImage(named: "f")
+        cell.avatar.image = UIImage(named: "new")
     //    var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
     //    if cell == nil {
     //        cell = UITableViewCell(style: .default, reuseIdentifier: "cell")

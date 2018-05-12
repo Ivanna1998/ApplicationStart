@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Application/Application/Scenes/Auth/OldAuthViewController.swift"
-            timestampString = "546254219.2274899"
+            timestampString = "546615189.4807661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "back(_:)"
             landmarkType = "7">
          </BreakpointContent>

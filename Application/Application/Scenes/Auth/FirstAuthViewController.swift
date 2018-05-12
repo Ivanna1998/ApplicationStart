@@ -16,6 +16,8 @@ final class FirstAuthViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    var emailText: String?
+    
     // Button to confirm registration and log in to TabBar
     @IBAction func complete(_ sender: UIButton) {
         
@@ -52,6 +54,11 @@ final class FirstAuthViewController: UIViewController {
     // Button to return to the home page
     @IBAction func back(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        email.text = emailText
     }
     
     private func switchMain() {

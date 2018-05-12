@@ -9,7 +9,7 @@
 import UIKit
 
 class NotificationsTableViewCell: UITableViewCell {
-    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var avatar: RoundImageView! /* UIImageView!*/
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var subName: UILabel!
 }
